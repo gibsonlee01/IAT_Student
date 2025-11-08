@@ -32,7 +32,7 @@ We evaluate the complete pipeline on the LOL-v2 dataset, and the performance com
 
 <br/>
 
-## Demo:
+## Demo
 <div align="center">
   <img src="./pics/comparision_grid.png" height="400">
 </div>
@@ -40,7 +40,7 @@ We evaluate the complete pipeline on the LOL-v2 dataset, and the performance com
   Figure 3: Example Outputs at Each Stage: IAT vs. Our Model
 </p>
 
-## Usage:
+## Usage
 
 Enviroment (install pytorch 1.7.1 or later, following [pytorch](https://pytorch.org/).):
 ```
