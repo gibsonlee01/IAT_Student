@@ -10,27 +10,23 @@ from model.IAT_main import IAT
 from torchvision.transforms import Normalize
 import matplotlib.pyplot as plt
 from PIL import Image
+from model.IAT_student import IAT_Student_BN
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--file_name', type=str, default='demo_imgs/low_demo.jpg')
-parser.add_argument('--normalize', type=bool, default=False)
-parser.add_argument('--task', type=str, default='enhance', help='Choose from exposure or enhance')
+parser.add_argument('--file_name', type=str, default='demo_imgs/low_demo.png')
+parser.add_argument('--normalize', type=bool, default=True) #you should normalize!
 config = parser.parse_args()
 
 # Weights path
-exposure_pretrain = r'best_Epoch_exposure.pth'
-enhance_pretrain = r'best_Epoch_lol_v1.pth'
+student_pretrain = r'/content/drive/MyDrive/IAT_test/IAT_enhance/ckpts/IAT_student/student_best.pth'
 
 normalize_process = Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
 
 ## Load Pre-train Weights
-model = IAT().cuda()
-if config.task == 'exposure':
-    model.load_state_dict(torch.load(exposure_pretrain))
-elif config.task == 'enhance':
-    model.load_state_dict(torch.load(enhance_pretrain))
-else:
-    warnings.warn('Only could be exposure or enhance')
+
+checkpoint = torch.load(student_pretrain, map_location='cuda', weights_only = False)
+model = IAT_Student_BN().cuda()
+model.load_state_dict(checkpoint['state_dict'])  
 model.eval()
 
 
@@ -41,7 +37,7 @@ if img.shape[2] == 4:
     img = img[:,:,:3]
 input = torch.from_numpy(img).float().cuda()
 input = input.permute(2,0,1).unsqueeze(0)
-if config.normalize:    # False
+if config.normalize:
     input = normalize_process(input)
 
 ## Forward Network
