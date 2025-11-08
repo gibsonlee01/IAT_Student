@@ -20,15 +20,15 @@ We evaluate the complete pipeline on the LOL-v2 dataset, and the performance com
 </p>
 
 <div style="display: flex; justify-content: center; gap: 20px; align-items: flex-start;">
-  <figure style="text-align: center;">
+  <div style="text-align: center;">
     <img src="./pics/table.png" height="200">
-    <figcaption>Table: Example Table Caption</figcaption>
-  </figure>
+    <p>Table: Example Table Caption</p>
+  </div>
 
-  <figure style="text-align: center;">
+  <div style="text-align: center;">
     <img src="./pics/comparision_plot.png" height="400">
-    <figcaption>Plot: Comparison of IAT and Our Model</figcaption>
-  </figure>
+    <p>Plot: Comparison of IAT and Our Model</p>
+  </div>
 </div>
 
 
