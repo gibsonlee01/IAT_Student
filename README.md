@@ -19,18 +19,16 @@ We evaluate the complete pipeline on the LOL-v2 dataset, and the performance com
   Figure 1: Overall pipeline of our method. The teacher model corresponds to IAT (BMVC 2022), while the student model is designed and trained via multi-level distillation.
 </p>
 
-<div style="display: flex; justify-content: center; gap: 20px; align-items: flex-start;">
-  <div style="text-align: center;">
-    <img src="./pics/table.png" height="200">
-    <p>Table: Example Table Caption</p>
-  </div>
-
-  <div style="text-align: center;">
-    <img src="./pics/comparision_plot.png" height="400">
-    <p>Plot: Comparison of IAT and Our Model</p>
-  </div>
-</div>
-
+<table>
+  <tr>
+    <td align="center">
+      <img src="./pics/table.png" height="200"><br>
+    </td>
+    <td align="center">
+      <img src="./pics/comparision_plot.png" height="400"><br>
+    </td>
+  </tr>
+</table>
 
 <br/>
 
