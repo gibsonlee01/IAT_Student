@@ -1,7 +1,7 @@
 # <font> Fast Low-Light Image Enhancement via Convolutions and Knowledge Distillation(2025)</font> 
 <br/>
 
-"Thanks to Byori Kim, Dongkyun Woo, and Bokyung Byun for their contributions"
+"Thanks to [Byeolee kim](kimbori711@gmail.com), [DongGyoon Woo](daniel8672@naver.com), and [Bogyeong Byun](jj_bg22@naver.com) for their contributions"
 
 <br/>
 
